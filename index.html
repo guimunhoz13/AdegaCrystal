@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adega Crystal | Bebidas e Mercearia em Araçatuba - 25 Anos de Tradição</title>
+<meta name="description" content="Adega Crystal - Bebidas sempre geladas, grande variedade e o melhor preço de Araçatuba. Delivery rápido pelo WhatsApp. 25 anos servindo bem sua família.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lucide-static/0.469.0/umd/lucide.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['Poppins', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+        },
+        colors: {
+          crystal: {
+            black: '#0b0b0d',
+            dark: '#131316',
+            card: '#1a1a1f',
+            border: '#2a2a30',
+            red: '#c81e2c',
+            redlight: '#e63946',
+            gold: '#e6b325',
+            goldlight: '#f5cf5b',
+          }
+        },
+        boxShadow: {
+          'glow-gold': '0 0 40px -10px rgba(230,179,37,0.35)',
+          'glow-red': '0 0 40px -10px rgba(200,30,44,0.45)',
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { background-color: #0b0b0d; }
+  .text-gradient-gold {
+    background: linear-gradient(90deg, #f5cf5b 0%, #e6b325 50%, #c8930f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .frost-border {
+    border-image: linear-gradient(90deg, transparent, #e6b325, transparent) 1;
+  }
+  .bg-noise {
+    background-image: radial-gradient(circle at 20% 20%, rgba(200,30,44,0.15), transparent 40%),
+                       radial-gradient(circle at 80% 0%, rgba(230,179,37,0.12), transparent 40%),
+                       radial-gradient(circle at 50% 100%, rgba(200,30,44,0.10), transparent 50%);
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  .animate-float { animation: float 4s ease-in-out infinite; }
+  .animate-float-delay { animation: float 4s ease-in-out infinite 1.2s; }
+  .animate-float-delay2 { animation: float 4s ease-in-out infinite 2.4s; }
+
+  @keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+    100% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  }
+  .whatsapp-pulse { animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+  .card-hover { transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
+  .card-hover:hover { transform: translateY(-6px); border-color: #e6b325; }
+
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #0b0b0d; }
+  ::-webkit-scrollbar-thumb { background: #2a2a30; border-radius: 10px; }
+  ::-webkit-scrollbar-thumb:hover { background: #e6b325; }
+
+  .stars svg { fill: #e6b325; stroke: #e6b325; }
+
+  .drop-cap-badge { backdrop-filter: blur(8px); }
+
+  #mobile-menu { transition: max-height .35s ease, opacity .3s ease; }
+</style>
+</head>
+<body class="bg-crystal-black text-gray-200 font-sans antialiased selection:bg-crystal-gold selection:text-black">
+
+<!-- ============ HEADER / NAVBAR ============ -->
+<header id="top" class="fixed top-0 inset-x-0 z-50 bg-crystal-black/80 backdrop-blur-lg border-b border-crystal-border">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="#top" class="flex items-center gap-3 group">
+        <div class="relative w-12 h-12 rounded-xl bg-gradient-to-br from-crystal-red to-red-900 flex items-center justify-center shadow-glow-red shrink-0">
+          <i data-lucide="wine" class="w-6 h-6 text-crystal-goldlight"></i>
+        </div>
+        <div class="leading-tight">
+          <p class="font-display font-extrabold text-lg sm:text-xl text-white tracking-tight">Adega <span class="text-gradient-gold">Crystal</span></p>
+          <div class="flex items-center gap-1">
+            <span class="text-[10px] sm:text-xs font-semibold text-crystal-gold uppercase tracking-wider">25 Anos de Tradição</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-gray-300">
+        <a href="#inicio" class="hover:text-crystal-gold transition-colors">Início</a>
+        <a href="#produtos" class="hover:text-crystal-gold transition-colors">Bebidas &amp; Produtos</a>
+        <a href="#diferenciais" class="hover:text-crystal-gold transition-colors">Diferenciais</a>
+        <a href="#depoimentos" class="hover:text-crystal-gold transition-colors">Depoimentos</a>
+        <a href="#localizacao" class="hover:text-crystal-gold transition-colors">Onde Estamos</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="https://wa.me/5518981290183?text=Ol%C3%A1%2C%20Adega%20Crystal!%20Gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold text-sm px-5 py-2.5 rounded-full transition-all shadow-lg hover:shadow-green-600/40 hover:scale-105">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          Pedir pelo WhatsApp
+        </a>
+      </div>
+
+      <!-- Mobile toggle -->
+      <button id="menu-toggle" class="lg:hidden text-gray-200 p-2 rounded-lg border border-crystal-border" aria-label="Abrir menu">
+        <i data-lucide="menu" class="w-6 h-6" id="icon-menu"></i>
+        <i data-lucide="x" class="w-6 h-6 hidden" id="icon-close"></i>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="lg:hidden max-h-0 overflow-hidden opacity-0">
+      <nav class="flex flex-col gap-1 pb-6 pt-2 font-medium text-gray-300 border-t border-crystal-border">
+        <a href="#inicio" class="nav-mobile-link py-3 px-2 rounded-lg hover:bg-crystal-card hover:text-crystal-gold transition-colors">Início</a>
+        <a href="#produtos" class="nav-mobile-link py-3 px-2 rounded-lg hover:bg-crystal-card hover:text-crystal-gold transition-colors">Bebidas &amp; Produtos</a>
+        <a href="#diferenciais" class="nav-mobile-link py-3 px-2 rounded-lg hover:bg-crystal-card hover:text-crystal-gold transition-colors">Diferenciais</a>
+        <a href="#depoimentos" class="nav-mobile-link py-3 px-2 rounded-lg hover:bg-crystal-card hover:text-crystal-gold transition-colors">Depoimentos</a>
+        <a href="#localizacao" class="nav-mobile-link py-3 px-2 rounded-lg hover:bg-crystal-card hover:text-crystal-gold transition-colors">Onde Estamos</a>
+        <a href="https://wa.me/5518981290183?text=Ol%C3%A1%2C%20Adega%20Crystal!%20Gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener"
+           class="mt-3 inline-flex items-center justify-center gap-2 bg-green-600 text-white font-semibold text-sm px-5 py-3 rounded-full">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          Pedir pelo WhatsApp
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="inicio" class="relative pt-32 pb-24 sm:pt-40 sm:pb-32 overflow-hidden bg-noise">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-crystal-dark via-crystal-black to-black -z-10"></div>
+  <div class="absolute -top-24 -left-24 w-96 h-96 bg-crystal-red/20 rounded-full blur-3xl -z-10"></div>
+  <div class="absolute top-1/3 -right-24 w-96 h-96 bg-crystal-gold/10 rounded-full blur-3xl -z-10"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+      <!-- Text -->
+      <div class="text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 bg-crystal-card border border-crystal-border rounded-full px-4 py-1.5 mb-6">
+          <span class="w-2 h-2 rounded-full bg-crystal-red animate-pulse"></span>
+          <span class="text-xs sm:text-sm font-semibold text-gray-300">2001 — 2026 · Araçatuba, SP</span>
+        </div>
+
+        <h1 class="font-display font-black text-4xl sm:text-5xl xl:text-6xl leading-[1.08] text-white">
+          A cerveja mais <span class="text-gradient-gold">gelada</span> de Araçatuba, há <span class="text-crystal-redlight">25 anos</span> na sua vizinhança.
+        </h1>
+
+        <p class="mt-6 text-base sm:text-lg text-gray-400 max-w-xl mx-auto lg:mx-0">
+          Bebida sempre trincando de gelada, grande variedade, atendimento nota mil e o melhor preço da região. A Adega Crystal serve bem a sua família desde 2001.
+        </p>
+
+        <div class="mt-9 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <a href="https://wa.me/5518981290183?text=Ol%C3%A1%2C%20Adega%20Crystal!%20Gostaria%20de%20fazer%20um%20pedido%20delivery." target="_blank" rel="noopener"
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-7 py-4 rounded-full transition-all shadow-lg hover:shadow-green-600/40 hover:scale-105">
+            <i data-lucide="bike" class="w-5 h-5"></i>
+            Pedir Delivery no WhatsApp
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Adega+Crystal+R.+Bol%C3%ADvia+1234+Planalto+Ara%C3%A7atuba+SP" target="_blank" rel="noopener"
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent border-2 border-crystal-gold text-crystal-gold hover:bg-crystal-gold hover:text-black font-semibold px-7 py-4 rounded-full transition-all">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+            Ver no Maps
+          </a>
+        </div>
+
+        <div class="mt-8 flex items-center justify-center lg:justify-start gap-2 text-sm text-gray-400">
+          <div class="flex stars">
+            <i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4 opacity-60"></i>
+          </div>
+          <span class="font-bold text-white">4,6</span>
+          <span>· 39+ avaliações no Google</span>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="relative flex items-center justify-center py-8 lg:py-0">
+        <div class="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-br from-crystal-red/30 via-crystal-gold/10 to-transparent flex items-center justify-center">
+          <div class="absolute inset-6 rounded-full border border-crystal-border/60"></div>
+          <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-full bg-gradient-to-br from-crystal-card to-crystal-black border border-crystal-gold/40 shadow-glow-gold flex items-center justify-center">
+            <i data-lucide="beer" class="w-24 h-24 sm:w-32 sm:h-32 text-crystal-gold"></i>
+          </div>
+
+          <!-- floating badges -->
+          <div class="animate-float absolute -top-2 -left-4 sm:left-0 drop-cap-badge bg-crystal-card/90 border border-crystal-border rounded-2xl px-4 py-2.5 shadow-xl flex items-center gap-2">
+            <i data-lucide="snowflake" class="w-5 h-5 text-blue-300"></i>
+            <span class="text-xs sm:text-sm font-semibold text-white whitespace-nowrap">Cerveja Trincando</span>
+          </div>
+          <div class="animate-float-delay absolute top-1/2 -right-4 sm:-right-2 drop-cap-badge bg-crystal-card/90 border border-crystal-border rounded-2xl px-4 py-2.5 shadow-xl flex items-center gap-2">
+            <i data-lucide="zap" class="w-5 h-5 text-crystal-gold"></i>
+            <span class="text-xs sm:text-sm font-semibold text-white whitespace-nowrap">Delivery Rápido</span>
+          </div>
+          <div class="animate-float-delay2 absolute -bottom-2 left-1/4 drop-cap-badge bg-crystal-card/90 border border-crystal-border rounded-2xl px-4 py-2.5 shadow-xl flex items-center gap-2">
+            <i data-lucide="heart-handshake" class="w-5 h-5 text-crystal-redlight"></i>
+            <span class="text-xs sm:text-sm font-semibold text-white whitespace-nowrap">Ambiente Acolhedor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIFERENCIAIS ============ -->
+<section id="diferenciais" class="py-20 sm:py-28 bg-crystal-dark border-y border-crystal-border">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-crystal-gold font-semibold text-sm uppercase tracking-widest">Por que escolher a gente</span>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-3">Nossos Diferenciais</h2>
+      <p class="text-gray-400 mt-4">Tudo que você precisa para o seu churrasco, festa ou aquele momento de relax, com a qualidade que só 25 anos de experiência entregam.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card-hover bg-crystal-card border border-crystal-border rounded-2xl p-7">
+        <div class="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-5">
+          <i data-lucide="snowflake" class="w-7 h-7 text-blue-300"></i>
+        </div>
+        <h3 class="font-display font-bold text-lg text-white mb-2">Estupidamente Geladas</h3>
+        <p class="text-sm text-gray-400">Cerveja e bebidas sempre trincando de geladas, na temperatura ideal para o seu momento.</p>
+      </div>
+
+      <div class="card-hover bg-crystal-card border border-crystal-border rounded-2xl p-7">
+        <div class="w-14 h-14 rounded-xl bg-crystal-red/10 flex items-center justify-center mb-5">
+          <i data-lucide="bike" class="w-7 h-7 text-crystal-redlight"></i>
+        </div>
+        <h3 class="font-display font-bold text-lg text-white mb-2">Delivery Ágil</h3>
+        <p class="text-sm text-gray-400">Entrega rápida na sua casa ou retirada prática no local, como você preferir.</p>
+      </div>
+
+      <div class="card-hover bg-crystal-card border border-crystal-border rounded-2xl p-7">
+        <div class="w-14 h-14 rounded-xl bg-crystal-gold/10 flex items-center justify-center mb-5">
+          <i data-lucide="shopping-cart" class="w-7 h-7 text-crystal-gold"></i>
+        </div>
+        <h3 class="font-display font-bold text-lg text-white mb-2">Mercearia &amp; Gelo</h3>
+        <p class="text-sm text-gray-400">Tudo para salvar seu churrasco e sua festa, do gelo aos petiscos, em um só lugar.</p>
+      </div>
+
+      <div class="card-hover bg-crystal-card border border-crystal-border rounded-2xl p-7">
+        <div class="w-14 h-14 rounded-xl bg-green-500/10 flex items-center justify-center mb-5">
+          <i data-lucide="heart-handshake" class="w-7 h-7 text-green-400"></i>
+        </div>
+        <h3 class="font-display font-bold text-lg text-white mb-2">Atendimento Familiar</h3>
+        <p class="text-sm text-gray-400">Nota 4,6 no Google. Atendimento nota mil que trata você como parte da família.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATEGORIAS EM DESTAQUE ============ -->
+<section id="produtos" class="py-20 sm:py-28 bg-crystal-black">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-crystal-gold font-semibold text-sm uppercase tracking-widest">Nosso Catálogo</span>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-3">Bebidas &amp; Produtos</h2>
+      <p class="text-gray-400 mt-4">Grande variedade para todos os gostos e ocasiões. Escolha, chame no WhatsApp e receba rapidinho.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Card 1 -->
+      <div class="card-hover group relative rounded-2xl overflow-hidden border border-crystal-border bg-crystal-card">
+        <div class="h-40 bg-gradient-to-br from-amber-600/30 to-crystal-black flex items-center justify-center">
+          <i data-lucide="beer" class="w-16 h-16 text-amber-400"></i>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display font-bold text-white text-lg mb-1">Cervejas</h3>
+          <p class="text-xs text-gray-400 mb-4">Tradicionais e especiais, sempre geladas.</p>
+          <a href="https://wa.me/5518981290183?text=Ol%C3%A1!%20Quero%20pedir%20Cervejas%20na%20Adega%20Crystal." target="_blank" rel="noopener"
+             class="inline-flex items-center gap-1.5 text-sm font-semibold text-crystal-gold hover:text-crystal-goldlight transition-colors">
+            Pedir este item <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card-hover group relative rounded-2xl overflow-hidden border border-crystal-border bg-crystal-card">
+        <div class="h-40 bg-gradient-to-br from-crystal-red/30 to-crystal-black flex items-center justify-center">
+          <i data-lucide="martini" class="w-16 h-16 text-crystal-redlight"></i>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display font-bold text-white text-lg mb-1">Destilados &amp; Licores</h3>
+          <p class="text-xs text-gray-400 mb-4">As melhores marcas para sua comemoração.</p>
+          <a href="https://wa.me/5518981290183?text=Ol%C3%A1!%20Quero%20pedir%20Destilados%20e%20Licores%20na%20Adega%20Crystal." target="_blank" rel="noopener"
+             class="inline-flex items-center gap-1.5 text-sm font-semibold text-crystal-gold hover:text-crystal-goldlight transition-colors">
+            Pedir este item <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card-hover group relative rounded-2xl overflow-hidden border border-crystal-border bg-crystal-card">
+        <div class="h-40 bg-gradient-to-br from-crystal-gold/30 to-crystal-black flex items-center justify-center">
+          <i data-lucide="wine" class="w-16 h-16 text-crystal-gold"></i>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display font-bold text-white text-lg mb-1">Vinhos &amp; Espumantes</h3>
+          <p class="text-xs text-gray-400 mb-4">Perfeitos para brindar suas conquistas.</p>
+          <a href="https://wa.me/5518981290183?text=Ol%C3%A1!%20Quero%20pedir%20Vinhos%20e%20Espumantes%20na%20Adega%20Crystal." target="_blank" rel="noopener"
+             class="inline-flex items-center gap-1.5 text-sm font-semibold text-crystal-gold hover:text-crystal-goldlight transition-colors">
+            Pedir este item <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card-hover group relative rounded-2xl overflow-hidden border border-crystal-border bg-crystal-card">
+        <div class="h-40 bg-gradient-to-br from-blue-500/30 to-crystal-black flex items-center justify-center">
+          <i data-lucide="cup-soda" class="w-16 h-16 text-blue-300"></i>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display font-bold text-white text-lg mb-1">Refris, Energéticos &amp; Gelo</h3>
+          <p class="text-xs text-gray-400 mb-4">Tudo que falta para fechar sua festa.</p>
+          <a href="https://wa.me/5518981290183?text=Ol%C3%A1!%20Quero%20pedir%20Refrigerantes%2C%20Energ%C3%A9ticos%20e%20Gelo%20na%20Adega%20Crystal." target="_blank" rel="noopener"
+             class="inline-flex items-center gap-1.5 text-sm font-semibold text-crystal-gold hover:text-crystal-goldlight transition-colors">
+            Pedir este item <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROVA SOCIAL ============ -->
+<section id="depoimentos" class="py-20 sm:py-28 bg-crystal-dark border-y border-crystal-border bg-noise">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="text-crystal-gold font-semibold text-sm uppercase tracking-widest">Quem experimenta, aprova</span>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-3">O Que Dizem Sobre Nós</h2>
+
+      <div class="mt-8 inline-flex flex-col items-center bg-crystal-card border border-crystal-border rounded-2xl px-8 py-6">
+        <div class="flex items-center gap-1 mb-2">
+          <svg class="w-24 h-8" viewBox="0 0 74 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><text x="0" y="18" font-family="Arial,sans-serif" font-size="18" font-weight="700"><tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">o</tspan><tspan fill="#FBBC05">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan></text></svg>
+        </div>
+        <div class="flex items-end gap-3">
+          <span class="font-display font-black text-5xl text-white">4,6</span>
+          <div class="flex flex-col items-start pb-1.5">
+            <div class="flex stars">
+              <i data-lucide="star" class="w-5 h-5"></i><i data-lucide="star" class="w-5 h-5"></i><i data-lucide="star" class="w-5 h-5"></i><i data-lucide="star" class="w-5 h-5"></i><i data-lucide="star" class="w-5 h-5 opacity-60"></i>
+            </div>
+            <span class="text-xs text-gray-400">39+ avaliações</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-crystal-card border border-crystal-border rounded-2xl p-7 flex flex-col">
+        <div class="flex stars mb-4">
+          <i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i>
+        </div>
+        <p class="text-gray-300 text-sm leading-relaxed flex-1">"O Atendimento é sempre impecável, com muita variedade e o melhor bebida sempre bem gelada, super indico 👍"</p>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-crystal-red/20 flex items-center justify-center text-crystal-redlight font-bold">C</div>
+          <div>
+            <p class="text-sm font-semibold text-white">Camila Magno</p>
+            <p class="text-xs text-gray-500">Local Guide · Google</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-crystal-card border border-crystal-border rounded-2xl p-7 flex flex-col">
+        <div class="flex stars mb-4">
+          <i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i>
+        </div>
+        <p class="text-gray-300 text-sm leading-relaxed flex-1">"Lugar top pra pegar aquela bebida gelada, bons amigos e ótimos colaboradores."</p>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-crystal-gold/20 flex items-center justify-center text-crystal-gold font-bold">G</div>
+          <div>
+            <p class="text-sm font-semibold text-white">Cliente Google</p>
+            <p class="text-xs text-gray-500">Avaliação verificada</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-crystal-card border border-crystal-border rounded-2xl p-7 flex flex-col">
+        <div class="flex stars mb-4">
+          <i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i><i data-lucide="star" class="w-4 h-4"></i>
+        </div>
+        <p class="text-gray-300 text-sm leading-relaxed flex-1">"Ótimo atendimento e excelentes preços! Estabelecimento nota mil."</p>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold">A</div>
+          <div>
+            <p class="text-sm font-semibold text-white">Ana Claudia &amp; Marcel</p>
+            <p class="text-xs text-gray-500">Avaliação verificada</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCALIZAÇÃO ============ -->
+<section id="localizacao" class="py-20 sm:py-28 bg-crystal-black">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="text-crystal-gold font-semibold text-sm uppercase tracking-widest">Venha nos visitar</span>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-3">Onde Estamos</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+      <div class="bg-crystal-card border border-crystal-border rounded-2xl p-8 sm:p-10 flex flex-col justify-center">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 rounded-xl bg-crystal-red/10 flex items-center justify-center shrink-0">
+            <i data-lucide="map-pin" class="w-6 h-6 text-crystal-redlight"></i>
+          </div>
+          <div>
+            <p class="font-display font-bold text-white text-lg">Endereço</p>
+            <p class="text-gray-400 text-sm mt-1">R. Bolívia, 1234 - Planalto<br>Araçatuba - SP, 16072-455</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center shrink-0">
+            <i data-lucide="clock" class="w-6 h-6 text-green-400"></i>
+          </div>
+          <div>
+            <p class="font-display font-bold text-white text-lg">Horário de Funcionamento</p>
+            <p class="text-gray-400 text-sm mt-1">
+              <span class="inline-flex items-center gap-1.5 text-green-400 font-semibold">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Aberto agora
+              </span>
+              · Fecha às 21:00 · Todos os dias
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 mb-8">
+          <div class="w-12 h-12 rounded-xl bg-crystal-gold/10 flex items-center justify-center shrink-0">
+            <i data-lucide="phone" class="w-6 h-6 text-crystal-gold"></i>
+          </div>
+          <div>
+            <p class="font-display font-bold text-white text-lg">Contato</p>
+            <p class="text-gray-400 text-sm mt-1">WhatsApp: (18) 98129-0183<br>Fixo: (18) 3621-5557</p>
+          </div>
+        </div>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Adega+Crystal+R.+Bol%C3%ADvia+1234+Planalto+Ara%C3%A7atuba+SP" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center gap-2 bg-crystal-gold hover:bg-crystal-goldlight text-black font-bold px-6 py-4 rounded-full transition-all hover:scale-[1.02] w-full sm:w-auto">
+          <i data-lucide="navigation" class="w-5 h-5"></i>
+          Traçar Rota no Google Maps
+        </a>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden border border-crystal-border min-h-[320px]">
+        <iframe
+          title="Mapa Adega Crystal"
+          src="https://maps.google.com/maps?q=R.+Bol%C3%ADvia,+1234+-+Planalto,+Ara%C3%A7atuba+-+SP,+16072-455&z=16&output=embed"
+          class="w-full h-full min-h-[320px]"
+          style="border:0; filter: invert(90%) hue-rotate(180deg) contrast(90%);"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-crystal-dark border-t border-crystal-border pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-crystal-red to-red-900 flex items-center justify-center shrink-0">
+            <i data-lucide="wine" class="w-5 h-5 text-crystal-goldlight"></i>
+          </div>
+          <p class="font-display font-extrabold text-lg text-white">Adega <span class="text-gradient-gold">Crystal</span></p>
+        </div>
+        <p class="text-sm text-gray-500">Servindo bem sua família desde 2001. Bebidas e mercearia com o melhor preço de Araçatuba.</p>
+      </div>
+
+      <div>
+        <p class="font-display font-bold text-white mb-4">Navegação</p>
+        <ul class="space-y-2 text-sm text-gray-500">
+          <li><a href="#inicio" class="hover:text-crystal-gold transition-colors">Início</a></li>
+          <li><a href="#produtos" class="hover:text-crystal-gold transition-colors">Bebidas &amp; Produtos</a></li>
+          <li><a href="#diferenciais" class="hover:text-crystal-gold transition-colors">Diferenciais</a></li>
+          <li><a href="#depoimentos" class="hover:text-crystal-gold transition-colors">Depoimentos</a></li>
+          <li><a href="#localizacao" class="hover:text-crystal-gold transition-colors">Onde Estamos</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-display font-bold text-white mb-4">Contato</p>
+        <ul class="space-y-3 text-sm text-gray-500">
+          <li class="flex items-center gap-2"><i data-lucide="message-circle" class="w-4 h-4 text-crystal-gold shrink-0"></i> (18) 98129-0183</li>
+          <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-crystal-gold shrink-0"></i> (18) 3621-5557</li>
+          <li class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-crystal-gold shrink-0 mt-0.5"></i> R. Bolívia, 1234 - Planalto, Araçatuba - SP</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-display font-bold text-white mb-4">Redes Sociais</p>
+        <div class="flex gap-3">
+          <a href="https://instagram.com/adegacrystalbebidas" target="_blank" rel="noopener" aria-label="Instagram" class="w-10 h-10 rounded-full bg-crystal-card border border-crystal-border flex items-center justify-center hover:border-crystal-gold hover:text-crystal-gold transition-colors">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </a>
+          <a href="https://facebook.com/AdegaCrystalBebidas" target="_blank" rel="noopener" aria-label="Facebook" class="w-10 h-10 rounded-full bg-crystal-card border border-crystal-border flex items-center justify-center hover:border-crystal-gold hover:text-crystal-gold transition-colors">
+            <i data-lucide="facebook" class="w-5 h-5"></i>
+          </a>
+          <a href="https://wa.me/5518981290183" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-crystal-card border border-crystal-border flex items-center justify-center hover:border-green-500 hover:text-green-400 transition-colors">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          </a>
+        </div>
+        <p class="text-xs text-gray-600 mt-4">@adegacrystalbebidas</p>
+      </div>
+    </div>
+
+    <div class="border-t border-crystal-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-gray-600 text-center sm:text-left">© 2026 Adega Crystal. Todos os direitos reservados.</p>
+      <p class="text-xs text-gray-500 text-center sm:text-right flex items-center gap-1.5">
+        <i data-lucide="triangle-alert" class="w-3.5 h-3.5 text-crystal-gold shrink-0"></i>
+        Beba com moderação. Venda proibida para menores de 18 anos.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOAT BUTTON ============ -->
+<a href="https://wa.me/5518981290183?text=Ol%C3%A1%2C%20Adega%20Crystal!%20Gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener"
+   aria-label="Chamar no WhatsApp"
+   class="whatsapp-pulse fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-green-600 hover:bg-green-500 flex items-center justify-center shadow-2xl transition-transform hover:scale-110">
+  <i data-lucide="message-circle" class="w-8 h-8 text-white"></i>
+</a>
+
+<script>
+  lucide.createIcons();
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconMenu = document.getElementById('icon-menu');
+  const iconClose = document.getElementById('icon-close');
+  let menuOpen = false;
+
+  function setMenu(open) {
+    menuOpen = open;
+    if (open) {
+      mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+      mobileMenu.style.opacity = '1';
+      iconMenu.classList.add('hidden');
+      iconClose.classList.remove('hidden');
+    } else {
+      mobileMenu.style.maxHeight = '0px';
+      mobileMenu.style.opacity = '0';
+      iconMenu.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    }
+  }
+
+  menuToggle.addEventListener('click', () => setMenu(!menuOpen));
+  document.querySelectorAll('.nav-mobile-link').forEach(link => {
+    link.addEventListener('click', () => setMenu(false));
+  });
+</script>
+</body>
+</html>
