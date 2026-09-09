@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adega Crystal | Bebidas e Mercearia em Araçatuba - 25 Anos de Tradição</title>
 <meta name="description" content="Adega Crystal - Bebidas sempre geladas, grande variedade e o melhor preço de Araçatuba. Delivery rápido pelo WhatsApp. 25 anos servindo bem sua família.">
+<meta property="og:title" content="Adega Crystal | 25 Anos de Tradição em Araçatuba">
+<meta property="og:description" content="Bebidas sempre geladas, grande variedade e o melhor preço da região. Peça pelo WhatsApp.">
+<meta property="og:image" content="assets/img/fachada.png">
+<meta property="og:type" content="website">
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide-static/0.469.0/umd/lucide.min.js"></script>
@@ -195,22 +199,23 @@
 
       <!-- Visual -->
       <div class="relative flex items-center justify-center py-8 lg:py-0">
-        <div class="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-br from-crystal-red/30 via-crystal-gold/10 to-transparent flex items-center justify-center">
-          <div class="absolute inset-6 rounded-full border border-crystal-border/60"></div>
-          <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-full bg-gradient-to-br from-crystal-card to-crystal-black border border-crystal-gold/40 shadow-glow-gold flex items-center justify-center">
-            <i data-lucide="beer" class="w-24 h-24 sm:w-32 sm:h-32 text-crystal-gold"></i>
-          </div>
+        <div class="relative w-full max-w-md">
+          <div class="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-crystal-red/40 via-crystal-gold/20 to-transparent blur-sm"></div>
+          <img
+            src="assets/img/fachada.png"
+            alt="Fachada da Adega Crystal em Araçatuba - SP"
+            class="relative w-full aspect-[4/3] object-cover rounded-[1.75rem] border-2 border-crystal-gold/40 shadow-glow-gold">
 
           <!-- floating badges -->
-          <div class="animate-float absolute -top-2 -left-4 sm:left-0 drop-cap-badge bg-crystal-card/90 border border-crystal-border rounded-2xl px-4 py-2.5 shadow-xl flex items-center gap-2">
+          <div class="animate-float absolute -top-4 -left-4 sm:-left-8 drop-cap-badge bg-crystal-card/90 border border-crystal-border rounded-2xl px-4 py-2.5 shadow-xl flex items-center gap-2">
             <i data-lucide="snowflake" class="w-5 h-5 text-blue-300"></i>
             <span class="text-xs sm:text-sm font-semibold text-white whitespace-nowrap">Cerveja Trincando</span>
           </div>
-          <div class="animate-float-delay absolute top-1/2 -right-4 sm:-right-2 drop-cap-badge bg-crystal-card/90 border border-crystal-border rounded-2xl px-4 py-2.5 shadow-xl flex items-center gap-2">
+          <div class="animate-float-delay absolute top-1/2 -right-4 sm:-right-8 drop-cap-badge bg-crystal-card/90 border border-crystal-border rounded-2xl px-4 py-2.5 shadow-xl flex items-center gap-2">
             <i data-lucide="zap" class="w-5 h-5 text-crystal-gold"></i>
             <span class="text-xs sm:text-sm font-semibold text-white whitespace-nowrap">Delivery Rápido</span>
           </div>
-          <div class="animate-float-delay2 absolute -bottom-2 left-1/4 drop-cap-badge bg-crystal-card/90 border border-crystal-border rounded-2xl px-4 py-2.5 shadow-xl flex items-center gap-2">
+          <div class="animate-float-delay2 absolute -bottom-4 left-1/4 drop-cap-badge bg-crystal-card/90 border border-crystal-border rounded-2xl px-4 py-2.5 shadow-xl flex items-center gap-2">
             <i data-lucide="heart-handshake" class="w-5 h-5 text-crystal-redlight"></i>
             <span class="text-xs sm:text-sm font-semibold text-white whitespace-nowrap">Ambiente Acolhedor</span>
           </div>
@@ -275,10 +280,14 @@
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Card 1 -->
+      <!-- Card 1 — foto temporária, trocar por foto real das cervejas -->
       <div class="card-hover group relative rounded-2xl overflow-hidden border border-crystal-border bg-crystal-card">
-        <div class="h-40 bg-gradient-to-br from-amber-600/30 to-crystal-black flex items-center justify-center">
-          <i data-lucide="beer" class="w-16 h-16 text-amber-400"></i>
+        <div class="relative h-40 overflow-hidden">
+          <img src="https://placehold.co/600x400/2a1a0d/f5a623?text=Cervejas&font=poppins" alt="Cervejas geladas na Adega Crystal" class="w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-crystal-black/60 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-crystal-black/70 backdrop-blur flex items-center justify-center">
+            <i data-lucide="beer" class="w-5 h-5 text-amber-400"></i>
+          </div>
         </div>
         <div class="p-6">
           <h3 class="font-display font-bold text-white text-lg mb-1">Cervejas</h3>
@@ -290,10 +299,14 @@
         </div>
       </div>
 
-      <!-- Card 2 -->
+      <!-- Card 2 — foto temporária, trocar por foto real dos destilados -->
       <div class="card-hover group relative rounded-2xl overflow-hidden border border-crystal-border bg-crystal-card">
-        <div class="h-40 bg-gradient-to-br from-crystal-red/30 to-crystal-black flex items-center justify-center">
-          <i data-lucide="martini" class="w-16 h-16 text-crystal-redlight"></i>
+        <div class="relative h-40 overflow-hidden">
+          <img src="https://placehold.co/600x400/2a0d10/e63946?text=Destilados&font=poppins" alt="Destilados e licores na Adega Crystal" class="w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-crystal-black/60 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-crystal-black/70 backdrop-blur flex items-center justify-center">
+            <i data-lucide="martini" class="w-5 h-5 text-crystal-redlight"></i>
+          </div>
         </div>
         <div class="p-6">
           <h3 class="font-display font-bold text-white text-lg mb-1">Destilados &amp; Licores</h3>
@@ -305,10 +318,14 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
+      <!-- Card 3 — foto temporária, trocar por foto real dos vinhos -->
       <div class="card-hover group relative rounded-2xl overflow-hidden border border-crystal-border bg-crystal-card">
-        <div class="h-40 bg-gradient-to-br from-crystal-gold/30 to-crystal-black flex items-center justify-center">
-          <i data-lucide="wine" class="w-16 h-16 text-crystal-gold"></i>
+        <div class="relative h-40 overflow-hidden">
+          <img src="https://placehold.co/600x400/2a2408/e6b325?text=Vinhos&font=poppins" alt="Vinhos e espumantes na Adega Crystal" class="w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-crystal-black/60 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-crystal-black/70 backdrop-blur flex items-center justify-center">
+            <i data-lucide="wine" class="w-5 h-5 text-crystal-gold"></i>
+          </div>
         </div>
         <div class="p-6">
           <h3 class="font-display font-bold text-white text-lg mb-1">Vinhos &amp; Espumantes</h3>
@@ -320,10 +337,14 @@
         </div>
       </div>
 
-      <!-- Card 4 -->
+      <!-- Card 4 — foto temporária, trocar por foto real dos refrigerantes/gelo -->
       <div class="card-hover group relative rounded-2xl overflow-hidden border border-crystal-border bg-crystal-card">
-        <div class="h-40 bg-gradient-to-br from-blue-500/30 to-crystal-black flex items-center justify-center">
-          <i data-lucide="cup-soda" class="w-16 h-16 text-blue-300"></i>
+        <div class="relative h-40 overflow-hidden">
+          <img src="https://placehold.co/600x400/0d1f2a/5bc0f5?text=Refris+%26+Gelo&font=poppins" alt="Refrigerantes, energéticos e gelo na Adega Crystal" class="w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-crystal-black/60 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-crystal-black/70 backdrop-blur flex items-center justify-center">
+            <i data-lucide="cup-soda" class="w-5 h-5 text-blue-300"></i>
+          </div>
         </div>
         <div class="p-6">
           <h3 class="font-display font-bold text-white text-lg mb-1">Refris, Energéticos &amp; Gelo</h3>
